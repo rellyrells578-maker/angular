@@ -11,9 +11,9 @@ function CustomPropDec(): PropertyDecorator {
 }
 
 export class AppComp {
-  static staticInput = 'static';
+  @Input() static staticInput = 'static';
   @CustomPropDec() static customStatic = 'custom';
-  #privateInput = 'private';
+  @Input() #privateInput = 'private';
   [COMPUTED_KEY] = new EventEmitter<void>();
   normalInput = 'normal';
   // @ts-ignore
